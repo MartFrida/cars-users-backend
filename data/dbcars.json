@@ -1,5 +1,8 @@
 [
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9ed"
+    },
     "year": 2019,
     "make": "Volvo",
     "model": "XC90",
@@ -25,6 +28,9 @@
     "mileage": 5352
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9ee"
+    },
     "year": 2009,
     "make": "Lincoln",
     "model": "Navigator L",
@@ -50,6 +56,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9ef"
+    },
     "year": 2020,
     "make": "Volvo",
     "model": "XC60",
@@ -75,6 +84,9 @@
     "mileage": 5966
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f0"
+    },
     "year": 2006,
     "make": "HUMMER",
     "model": "H2",
@@ -100,6 +112,9 @@
     "mileage": 4771
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f1"
+    },
     "year": 2016,
     "make": "Subaru",
     "model": "Outback",
@@ -125,6 +140,9 @@
     "mileage": 4061
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f2"
+    },
     "year": 2010,
     "make": "Mitsubishi",
     "model": "Outlander",
@@ -150,6 +168,9 @@
     "mileage": 5374
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f3"
+    },
     "year": 2014,
     "make": "Nissan",
     "model": "Pathfinder",
@@ -175,6 +196,9 @@
     "mileage": 6282
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f4"
+    },
     "year": "2008",
     "make": "Buick",
     "model": "Enclave",
@@ -199,6 +223,9 @@
     "rentalConditions": "Minimum age: 21\nValid driver's license\nProof of insurance required"
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f5"
+    },
     "year": 2000,
     "make": "GMC",
     "model": "Yukon Denali",
@@ -224,6 +251,9 @@
     "mileage": 4989
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f6"
+    },
     "year": 2007,
     "make": "Hyundai",
     "model": "Tucson",
@@ -249,6 +279,9 @@
     "mileage": 4591
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f7"
+    },
     "year": 2006,
     "make": "MINI",
     "model": "Convertible",
@@ -274,6 +307,9 @@
     "mileage": 6275
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f8"
+    },
     "year": 2007,
     "make": "Bentley",
     "model": "Azure",
@@ -299,6 +335,9 @@
     "mileage": 4317
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9f9"
+    },
     "year": 2004,
     "make": "Mercedes-Benz",
     "model": "SL-Class",
@@ -324,6 +363,9 @@
     "mileage": 5722
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9fa"
+    },
     "year": 2010,
     "make": "Aston Martin",
     "model": "DBS",
@@ -349,6 +391,9 @@
     "mileage": 6464
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9fb"
+    },
     "year": 1996,
     "make": "Pontiac",
     "model": "Firebird",
@@ -374,6 +419,9 @@
     "mileage": 5091
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9fc"
+    },
     "year": 2009,
     "make": "Lamborghini",
     "model": "Murcielago",
@@ -399,6 +447,9 @@
     "mileage": 5832
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9fd"
+    },
     "year": 2011,
     "make": "Audi",
     "model": "A5",
@@ -424,6 +475,9 @@
     "mileage": 4635
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9fe"
+    },
     "year": 2001,
     "make": "BMW",
     "model": "Z8",
@@ -449,6 +503,9 @@
     "mileage": 5990
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4c9ff"
+    },
     "year": 1998,
     "make": "Chevrolet",
     "model": "Camaro",
@@ -474,6 +531,9 @@
     "mileage": 6330
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca00"
+    },
     "year": 2006,
     "make": "Mercedes-Benz",
     "model": "SLK-Class",
@@ -499,6 +559,9 @@
     "mileage": 6280
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca01"
+    },
     "year": 2020,
     "make": "Chrysler",
     "model": "Voyager",
@@ -524,6 +587,9 @@
     "mileage": 5807
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca02"
+    },
     "year": 2020,
     "make": "Kia",
     "model": "Rio",
@@ -549,6 +615,9 @@
     "mileage": 4618
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca03"
+    },
     "year": 2020,
     "make": "Volvo",
     "model": "XC60",
@@ -574,6 +643,9 @@
     "mileage": 6618
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca04"
+    },
     "year": 2020,
     "make": "Land Rover",
     "model": "Range Rover Sport",
@@ -599,6 +671,9 @@
     "mileage": 4856
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca05"
+    },
     "year": 2020,
     "make": "Kia",
     "model": "Rio",
@@ -624,6 +699,9 @@
     "mileage": 6234
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca06"
+    },
     "year": "year 96304",
     "make": "make 96304",
     "model": "model 96304",
@@ -649,6 +727,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca07"
+    },
     "year": "year 96305",
     "make": "make 96305",
     "model": "model 96305",
@@ -674,6 +755,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca08"
+    },
     "year": "year 96306",
     "make": "make 96306",
     "model": "model 96306",
@@ -699,6 +783,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca09"
+    },
     "year": "year 96307",
     "make": "make 96307",
     "model": "model 96307",
@@ -724,6 +811,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca0a"
+    },
     "year": "year 96308",
     "make": "make 96308",
     "model": "model 96308",
@@ -749,6 +839,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca0b"
+    },
     "year": "year 96309",
     "make": "make 96309",
     "model": "model 96309",
@@ -774,6 +867,9 @@
     "mileage": 6173
   },
   {
+    "_id": {
+      "$oid": "6640d5959aad716442f4ca0c"
+    },
     "year": "year 96310",
     "make": "make 96310",
     "model": "model 96310",
@@ -797,5 +893,29 @@
     "address": "123 Example Boulevard, Kharkiv, Ukraine",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nInsurance coverage required",
     "mileage": 6173
+  },
+  {
+    "id": {
+      "$oid": "iFYjTkdl_QxYtIZT1LbHe"
+    },
+    "make": "Bentl",
+    "model": "RC901",
+    "rentalPrice": "$42"
+  },
+  {
+    "id": {
+      "$oid": "JoNNLrgrv4dM8lhjKmcg2"
+    },
+    "make": "Mersedes",
+    "model": "RC901",
+    "rentalPrice": "$42"
+  },
+  {
+    "id": {
+      "$oid": "ziROhT0ZDnfD4qxPPTN8b"
+    },
+    "make": "Mersedes",
+    "model": "RC901",
+    "rentalPrice": "$42"
   }
 ]
