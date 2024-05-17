@@ -1,5 +1,5 @@
 import express from 'express';
-// import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import dotenv from 'dotenv'
 import morgan from "morgan";
 import cors from "cors";
@@ -36,13 +36,13 @@ app.use((err, req, res, next) => {
 
 const { DB_HOST, PORT = 4000 } = process.env
 
-app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
-// mongoose.connect(DB_HOST)
-//   .then(() => {
-//     app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
-//   })
-//   .catch(error => {
-//     console.log(error.message)
-//     process.exit(1)
-//   })
+// app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
+mongoose.connect(DB_HOST)
+  .then(() => {
+    app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
+  })
+  .catch(error => {
+    console.log(error.message)
+    process.exit(1)
+  })
 

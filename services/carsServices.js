@@ -1,57 +1,40 @@
-import fs from 'fs/promises'
-import { nanoid } from 'nanoid'
-import path from 'path'
+// import fs from 'fs/promises'
+// import { nanoid } from 'nanoid'
+// import path from 'path'
+import Car from '../models/Car.js'
 
+// const carsPath = path.resolve('data', 'dbcars.json')
+// const updateCars = cars => fs.writeFile(carsPath, JSON.stringify(cars, null, 2))
 
-const carsPath = path.resolve('data', 'dbcars.json')
-const updateCars = cars => fs.writeFile(carsPath, JSON.stringify(cars, null, 2))
-
-export async function listCars() {
-  const data = await fs.readFile(carsPath, "utf-8")
-  return JSON.parse(data)
-}
+export const listCars = () => Car.find()
 
 export async function getCarById(carId) {
-  const cars = await listCars()
-  const result = cars.find(item => item._id.$oid === carId)
-  return result || null
+  // const cars = await listCars()
+  // const result = cars.find(item => item._id.$oid === carId)
+  // return result || null
 }
 
 export async function removeCar(carId) {
-  const cars = await listCars()
-  const index = cars.findIndex(item => item._id.$oid === carId)
-  if (index === -1) {
-    return null
-  }
-  const [result] = cars.splice(index, 1)
-  await updateCars(cars)
-  return result
+  // const cars = await listCars()
+  // const index = cars.findIndex(item => item._id.$oid === carId)
+  // if (index === -1) {
+  //   return null
+  // }
+  // const [result] = cars.splice(index, 1)
+  // await updateCars(cars)
+  // return result
 }
 
-export async function addCar(data) {
-  const { make, model, rentalPrice } = data
-  const cars = await listCars()
-
-  const newContact = {
-    _id: {
-      $oid: nanoid()
-    },
-    ...data,
-  }
-
-  cars.push(newContact)
-  await updateCars(cars)
-  return newContact
-}
+export const addCar = async (data) => Car.create(data)
 
 export async function updateCar(id, data) {
-  const cars = await listCars()
-  const index = cars.findIndex(item => item._id.$oid === id)
-  if (index === -1) {
-    return null
-  }
+  // const cars = await listCars()
+  // const index = cars.findIndex(item => item._id.$oid === id)
+  // if (index === -1) {
+  //   return null
+  // }
 
-  cars[index] = { ...cars[index], ...data }
-  await updateCars(cars)
-  return cars[index]
+  // cars[index] = { ...cars[index], ...data }
+  // await updateCars(cars)
+  // return cars[index]
 }
