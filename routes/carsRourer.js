@@ -9,12 +9,8 @@ carsRouter.get('/:id', carsController.getCarById)
 
 carsRouter.post('/', carsController.addCar)
 
-carsRouter.put('/', (req, res) => {
-  res.json(cars[0])
-})
+carsRouter.put('/', carsController.updateCarById)
 
-carsRouter.delete('/:id', (req, res) => {
-  res.json(cars[0])
-})
+carsRouter.delete('/:id', carsController.deleteCar)
 
 export default carsRouter;

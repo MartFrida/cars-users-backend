@@ -893,29 +893,5 @@
     "address": "123 Example Boulevard, Kharkiv, Ukraine",
     "rentalConditions": "Minimum age: 25\nValid driver's license\nInsurance coverage required",
     "mileage": 6173
-  },
-  {
-    "id": {
-      "$oid": "iFYjTkdl_QxYtIZT1LbHe"
-    },
-    "make": "Bentl",
-    "model": "RC901",
-    "rentalPrice": "$42"
-  },
-  {
-    "id": {
-      "$oid": "JoNNLrgrv4dM8lhjKmcg2"
-    },
-    "make": "Mersedes",
-    "model": "RC901",
-    "rentalPrice": "$42"
-  },
-  {
-    "id": {
-      "$oid": "ziROhT0ZDnfD4qxPPTN8b"
-    },
-    "make": "Mersedes",
-    "model": "RC901",
-    "rentalPrice": "$42"
   }
 ]

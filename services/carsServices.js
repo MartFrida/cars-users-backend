@@ -33,7 +33,7 @@ export async function addCar(data) {
   const cars = await listCars()
 
   const newContact = {
-    id: {
+    _id: {
       $oid: nanoid()
     },
     ...data,
@@ -44,7 +44,7 @@ export async function addCar(data) {
   return newContact
 }
 
-export async function updateContact(id, data) {
+export async function updateCar(id, data) {
   const cars = await listCars()
   const index = cars.findIndex(item => item._id.$oid === id)
   if (index === -1) {
