@@ -1,7 +1,11 @@
 import Joi from "joi";
 
 export const carAddSchema = Joi.object({
-  make: Joi.string().required(),
+  make: Joi.string().valid("Lincoln",
+    "Bentley",
+    "Aston Martin",
+    "Pontiac",
+    "Lamborghini",).required(),
   // make: Joi.string(),
   // model: Joi.string(),
   // type: Joi.string(),
@@ -12,7 +16,11 @@ export const carAddSchema = Joi.object({
 })
 
 export const carUpdateSchema = Joi.object({
-  make: Joi.string(),
+  make: Joi.string().valid("Lincoln",
+    "Bentley",
+    "Aston Martin",
+    "Pontiac",
+    "Lamborghini",),
   model: Joi.string(),
   rentalPrice: Joi.string(),
 })

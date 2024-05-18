@@ -8,33 +8,10 @@ import Car from '../models/Car.js'
 
 export const listCars = () => Car.find()
 
-export async function getCarById(carId) {
-  // const cars = await listCars()
-  // const result = cars.find(item => item._id.$oid === carId)
-  // return result || null
-}
+export const getCarById = (carId) => Car.findById(carId)
 
-export async function removeCar(carId) {
-  // const cars = await listCars()
-  // const index = cars.findIndex(item => item._id.$oid === carId)
-  // if (index === -1) {
-  //   return null
-  // }
-  // const [result] = cars.splice(index, 1)
-  // await updateCars(cars)
-  // return result
-}
+export const removeCar = (carId) => Car.findByIdAndDelete(carId)
 
 export const addCar = async (data) => Car.create(data)
 
-export async function updateCar(id, data) {
-  // const cars = await listCars()
-  // const index = cars.findIndex(item => item._id.$oid === id)
-  // if (index === -1) {
-  //   return null
-  // }
-
-  // cars[index] = { ...cars[index], ...data }
-  // await updateCars(cars)
-  // return cars[index]
-}
+export const updateCar = (id, data) => Car.findByIdAndUpdate(id, data)

@@ -1,29 +1,16 @@
 import { Schema, model } from "mongoose";
+import { handleSaveError, setUpdateSetting } from "./hooks.js";
 
 const carSchema = new Schema({
   make: {
     type: String,
-    enum: ["Buick",
-      "Volvo",
-      "HUMMER",
-      "Subaru",
-      "Mitsubishi",
-      "Nissan",
+    enum: [
       "Lincoln",
-      "GMC",
-      "Hyundai",
-      "MINI",
       "Bentley",
-      "Mercedes",
       "Aston Martin",
       "Pontiac",
       "Lamborghini",
-      "Audi",
-      "BMW",
-      "Chevrolet",
-      "Chrysler",
-      "Kia",
-      "Land"],
+    ],
     required: true,
   },
   rentalPrice: {
@@ -31,6 +18,12 @@ const carSchema = new Schema({
     required: true,
   },
 }, { versionKey: false, timestamps: true })
+
+carSchema.post('save', handleSaveError)
+
+carSchema.pre('findOneAndUpdate', setUpdateSetting)
+
+carSchema.post('findOneAndUpdate', handleSaveError)
 
 const Car = model('car', carSchema)
 

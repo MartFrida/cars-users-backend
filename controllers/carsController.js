@@ -1,6 +1,7 @@
 import * as carsServices from '../services/carsServices.js'
 import HttpError from '../helpers/HttpError.js'
 import { carAddSchema, carUpdateSchema } from '../schemas/carsSchema.js'
+import ctrlWrapper from '../decorators/ctrlWrapper.js'
 
 const getAllCars = async (req, res, next) => {
   try {
@@ -25,16 +26,8 @@ const getCarById = async (req, res, next) => {
 }
 
 const addCar = async (req, res, next) => {
-  try {
-    const { error } = carAddSchema.validate(req.body)
-    if (error) {
-      throw HttpError(400, error.message)
-    }
-    const result = await carsServices.addCar(req.body)
-    res.status(201).json(result)
-  } catch (error) {
-    next(error)
-  }
+  const result = await carsServices.addCar(req.body)
+  res.status(201).json(result)
 }
 
 const updateCarById = async (req, res, next) => {
@@ -69,9 +62,9 @@ const deleteCar = async (req, res, next) => {
 }
 
 export default {
-  getAllCars,
-  getCarById,
-  addCar,
-  updateCarById,
-  deleteCar
+  getAllCars: ctrlWrapper(getAllCars),
+  getCarById: ctrlWrapper(getCarById),
+  addCar: ctrlWrapper(addCar),
+  updateCarById: ctrlWrapper(updateCarById),
+  deleteCar: ctrlWrapper(deleteCar)
 }

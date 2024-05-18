@@ -1,16 +1,20 @@
 import cars from '../data/cars.js'
 import express from 'express'
 import carsController from '../controllers/carsController.js';
+import validateBody from '../helpers/validateBody.js';
+import { carAddSchema, carUpdateSchema } from '../schemas/carsSchema.js';
+import isValidId from '../middlewares/isValidId.js';
 
 const carsRouter = express.Router();
+
 carsRouter.get('/', carsController.getAllCars)
 
-carsRouter.get('/:id', carsController.getCarById)
+carsRouter.get('/:id', isValidId, carsController.getCarById)
 
-carsRouter.post('/', carsController.addCar)
+carsRouter.post('/', validateBody(carAddSchema), carsController.addCar)
 
-carsRouter.put('/', carsController.updateCarById)
+carsRouter.put('/:id', isValidId, validateBody(carUpdateSchema), carsController.updateCarById)
 
-carsRouter.delete('/:id', carsController.deleteCar)
+carsRouter.delete('/:id', isValidId, carsController.deleteCar)
 
 export default carsRouter;
