@@ -6,7 +6,7 @@ import cors from "cors";
 
 import products from './data/products.js'
 
-// import authRouter from './routes/authRouter.js';
+import authRouter from './routes/authRouter.js';
 
 import carsRouter from './routes/carsRourer.js';
 
@@ -17,7 +17,7 @@ app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
 
-// app.use('/api/auth', authRouter)
+app.use('/api/auth', authRouter)
 app.use('/api/cars', carsRouter)
 
 app.get('/products', (req, res) => {
