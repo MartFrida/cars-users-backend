@@ -5,12 +5,24 @@ import ctrlWrapper from '../decorators/ctrlWrapper.js'
 
 const getAllCars = async (req, res, next) => {
   try {
-    const result = await carsServices.listCars()
+    // const result = await carsServices.listCars()
+    const { _id: owner } = req.user
+    const result = await carsServices.getCarsByFilter({ owner })
     res.json(result)
   } catch (error) {
     next(error)
   }
 }
+
+// const getCarsByFilter = async (req, res, next) => {
+//   try {
+//     const { _id: owner } = req.user
+//     const result = await carsServices.getCarsByFilter({ owner })
+//     res.json(result)
+//   } catch (error) {
+//     next(error)
+//   }
+// }
 
 const getCarById = async (req, res, next) => {
   try {
@@ -26,7 +38,8 @@ const getCarById = async (req, res, next) => {
 }
 
 const addCar = async (req, res, next) => {
-  const result = await carsServices.addCar(req.body)
+  const { _id: owner } = req.user
+  const result = await carsServices.addCar({ ...req.body, owner })
   res.status(201).json(result)
 }
 
@@ -63,6 +76,7 @@ const deleteCar = async (req, res, next) => {
 
 export default {
   getAllCars: ctrlWrapper(getAllCars),
+  // getCarsByFilter: ctrlWrapper(getCarsByFilter),
   getCarById: ctrlWrapper(getCarById),
   addCar: ctrlWrapper(addCar),
   updateCarById: ctrlWrapper(updateCarById),

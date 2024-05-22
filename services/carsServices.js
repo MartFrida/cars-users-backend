@@ -8,6 +8,8 @@ import Car from '../models/Car.js'
 
 export const listCars = () => Car.find()
 
+export const getCarsByFilter = (filter) => Car.find(filter, '-createdAt, -updatedAt')
+
 export const getCarById = (carId) => Car.findById(carId)
 
 export const removeCar = (carId) => Car.findByIdAndDelete(carId)
