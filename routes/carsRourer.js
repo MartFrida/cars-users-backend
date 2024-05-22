@@ -4,8 +4,11 @@ import carsController from '../controllers/carsController.js';
 import validateBody from '../helpers/validateBody.js';
 import { carAddSchema, carUpdateSchema } from '../schemas/carsSchema.js';
 import isValidId from '../middlewares/isValidId.js';
+import autenticate from '../middlewares/autenticate.js';
 
 const carsRouter = express.Router();
+
+carsRouter.use(autenticate)
 
 carsRouter.get('/', carsController.getAllCars)
 
