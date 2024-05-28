@@ -12,6 +12,8 @@ carsRouter.use(autenticate)
 
 carsRouter.get('/', carsController.getAllCars)
 
+carsRouter.get('/owner', carsController.getCarsByFilter)
+
 carsRouter.get('/:id', isValidId, carsController.getCarById)
 
 carsRouter.post('/', validateBody(carAddSchema), carsController.addCar)

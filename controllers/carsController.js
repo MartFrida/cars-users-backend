@@ -4,8 +4,19 @@ import { carAddSchema, carUpdateSchema } from '../schemas/carsSchema.js'
 import ctrlWrapper from '../decorators/ctrlWrapper.js'
 
 const getAllCars = async (req, res, next) => {
+  const { page = 1, limit = 10 } = req.query
+  const skip = (page - 1) * limit
   try {
-    // const result = await carsServices.listCars()
+    const result = await carsServices.listCars({ skip, limit })
+    const total = await carsServices.getCarsCount()
+    res.json({ total, result })
+  } catch (error) {
+    next(error)
+  }
+}
+
+const getCarsByFilter = async (req, res, next) => {
+  try {
     const { _id: owner } = req.user
     const result = await carsServices.getCarsByFilter({ owner })
     res.json(result)
@@ -13,16 +24,6 @@ const getAllCars = async (req, res, next) => {
     next(error)
   }
 }
-
-// const getCarsByFilter = async (req, res, next) => {
-//   try {
-//     const { _id: owner } = req.user
-//     const result = await carsServices.getCarsByFilter({ owner })
-//     res.json(result)
-//   } catch (error) {
-//     next(error)
-//   }
-// }
 
 const getCarById = async (req, res, next) => {
   try {
@@ -76,7 +77,7 @@ const deleteCar = async (req, res, next) => {
 
 export default {
   getAllCars: ctrlWrapper(getAllCars),
-  // getCarsByFilter: ctrlWrapper(getCarsByFilter),
+  getCarsByFilter: ctrlWrapper(getCarsByFilter),
   getCarById: ctrlWrapper(getCarById),
   addCar: ctrlWrapper(addCar),
   updateCarById: ctrlWrapper(updateCarById),
