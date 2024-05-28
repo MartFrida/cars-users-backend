@@ -7,3 +7,5 @@ export const signup = async (data) => {
 
   return User.create({ ...data, password: hashPassword })
 }
+
+export const setToken = (id, token = '') => User.findByIdAndUpdate(id, { token })
