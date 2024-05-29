@@ -5,6 +5,7 @@ import validateBody from '../helpers/validateBody.js';
 import { carAddSchema, carUpdateSchema } from '../schemas/carsSchema.js';
 import isValidId from '../middlewares/isValidId.js';
 import authenticate from '../middlewares/authenticate.js';
+import upload from '../middlewares/upload.js';
 
 const carsRouter = express.Router();
 
@@ -16,7 +17,9 @@ carsRouter.get('/owner', carsController.getCarsByFilter)
 
 carsRouter.get('/:id', isValidId, carsController.getCarById)
 
-carsRouter.post('/', validateBody(carAddSchema), carsController.addCar)
+// upload.fields([{name:'photo',maxCount:1}])
+// upload.array('photo',8)
+carsRouter.post('/', upload.single('photo'), validateBody(carAddSchema), carsController.addCar)
 
 carsRouter.put('/:id', isValidId, validateBody(carUpdateSchema), carsController.updateCarById)
 
