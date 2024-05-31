@@ -2,8 +2,8 @@ import * as carsServices from '../services/carsServices.js'
 import HttpError from '../helpers/HttpError.js'
 import { carAddSchema, carUpdateSchema } from '../schemas/carsSchema.js'
 import ctrlWrapper from '../decorators/ctrlWrapper.js'
-import fs from 'fs/promises'
 import path from 'path'
+import cloudinary from '../helpers/cloudinary.js'
 
 const carsDir = path.resolve('public', 'cars')
 
@@ -43,12 +43,13 @@ const getCarById = async (req, res, next) => {
 }
 
 const addCar = async (req, res, next) => {
-  const { path: oldPath, filename } = req.file
-  const newPath = path.join(carsDir, filename)
-  await fs.rename(oldPath, newPath)
   const { _id: owner } = req.user
-  const photo = path.join("cars", filename)
+  const { url: photo } = await cloudinary.uploader.upload(req.file.path, {
+    folder: 'cars'
+  })
+
   const result = await carsServices.addCar({ ...req.body, photo, owner })
+
   res.status(201).json(result)
 }
 
