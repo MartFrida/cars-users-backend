@@ -47,7 +47,7 @@ const addCar = async (req, res, next) => {
   const newPath = path.join(carsDir, filename)
   await fs.rename(oldPath, newPath)
   const { _id: owner } = req.user
-  const photo = path.join('public', 'cars', filename)
+  const photo = path.join("cars", filename)
   const result = await carsServices.addCar({ ...req.body, photo, owner })
   res.status(201).json(result)
 }
