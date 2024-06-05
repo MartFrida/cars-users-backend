@@ -38,12 +38,14 @@ app.use((err, req, res, next) => {
 const { DB_HOST, PORT = 4000 } = process.env
 
 // app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
-mongoose.connect(DB_HOST)
-  .then(() => {
-    app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
-  })
-  .catch(error => {
-    console.log(error.message)
-    process.exit(1)
-  })
 
+// mongoose.connect(DB_HOST)
+//   .then(() => {
+//     app.listen(PORT, () => console.log(`Server run successfull on ${PORT} PORT`))
+//   })
+//   .catch(error => {
+//     console.log(error.message)
+//     process.exit(1)
+//   })
+
+export default app
